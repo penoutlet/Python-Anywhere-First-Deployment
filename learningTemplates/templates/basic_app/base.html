@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="navbar-nav">
+        <a class="navbar-brand" href="{% url 'basic_app:index' %}">Sam Jones</a>
+       <a class="nav-item nav-link" href="{% url 'basic_app:other' %}">Other</a>
+        <a class="nav-item nav-link" href="{% url 'basic_app:relative' %}"> Relative Templates</a>
+      	 <a class="nav-item nav-link" href="{% url 'admin:index' %}">Admin</a>
+      </div>
+    </nav>
+
+ <div class="container">
+ 	{% block body_block %}
+ 	<!-- anything outside of this will be inherited if you extend -->
+ 	{% endblock %}
+ </div>
+</body>
+</html>
